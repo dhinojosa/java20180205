@@ -116,6 +116,15 @@ Setting Java Properties
 -----------------------
 java -D{key}={value} {class}
 
+Common Maven Commands
+---------------------
+mvn compile
+mvn test
+mvn package
+mvn clean
+mvn clean package
+mvn clean compile
+
 Maven View Effective POM
 ------------------------
 mvn help:effective-pom
@@ -137,4 +146,4 @@ Visual Code Shortcuts
 COMMAND + SHIFT + P = Lookup Shortcut
 COMMAND + P = Quick Open / Recent Files
 CTRL + COMMAND + F = Toggle Full Screen
-COMMAND + K + Z = Zen Mode
+COMMAND + K + Z = Zen Mode, ESC+ESC to get out Zen Mode
