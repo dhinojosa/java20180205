@@ -109,3 +109,11 @@ COMMAND + 1 = Get Code Hint
 COMMAND + . = Next Error
 COMMAND + , = Previous Error
 (Replace COMMAND with CTRL for Windows)
+
+Setting Java Properties
+-----------------------
+java -D{key}={value} {class}
+
+Maven View Effective POM
+------------------------
+mvn help:effective-pom
