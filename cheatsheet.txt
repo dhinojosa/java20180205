@@ -1,3 +1,11 @@
+What do your teams do?
+----------------------
+Connection to DB
+Rest Endpoints/Calling Web Service
+Parsing XML, JSON
+File Manipulation
+Logging
+
 Compiling Command Line
 -------
 javac -d {target} -cp {location of classes} {location of src}
@@ -147,3 +155,22 @@ COMMAND + SHIFT + P = Lookup Shortcut
 COMMAND + P = Quick Open / Recent Files
 CTRL + COMMAND + F = Toggle Full Screen
 COMMAND + K + Z = Zen Mode, ESC+ESC to get out Zen Mode
+
+Tips
+----
+Use "Column Selection Mode" for blocks
+
+No Operator Overloading in Java (no +, -)
+
+Java Language Tips
+------------------
+Use equals() for objects
+-- Unless you want to determine whether references are the same.
+Use == for primitives
+
+System.out.println Shortcuts
+-----------------------------
+IntelliJ - sout<TAB>
+Eclipse - sysout<CTRL+SPACE>
+
+
