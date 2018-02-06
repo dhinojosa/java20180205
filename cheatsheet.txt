@@ -105,9 +105,11 @@ Get the list of Eclipse Shortcuts
 ---------------------------------
 COMMAND + SHIFT + L = Cheatsheet
 COMMAND + 3 = Lookup Shortcut
-COMMAND + 1 = Get Code Hint
+COMMAND + 1 = Fix Error/Get Code Hint
 COMMAND + . = Next Error
 COMMAND + , = Previous Error
+COMMAND + E = Recent Files
+CTRL + M = Maximize Editor
 (Replace COMMAND with CTRL for Windows)
 
 Setting Java Properties
@@ -117,3 +119,22 @@ java -D{key}={value} {class}
 Maven View Effective POM
 ------------------------
 mvn help:effective-pom
+
+IntelliJ Shortcuts
+----------------------------------
+COMMAND+SHIFT+A = Lookup Shortcut
+COMMAND+{1,2,3,4,..} = Open Window
+COMMAND+E = Recent Files
+ESC = Go to Editor Windows
+OPTION + COMMAND + L = Format Code
+OPTION + ENTER = Fix Error/Get Code Hint
+F2/SHIFT + F2 = Go to next/previous Error
+COMMAND + SHIFT + F12 = Maximize Editor
+CTRL + OPTION + R = Run
+
+Visual Code Shortcuts
+----------------------
+COMMAND + SHIFT + P = Lookup Shortcut
+COMMAND + P = Quick Open / Recent Files
+CTRL + COMMAND + F = Toggle Full Screen
+COMMAND + K + Z = Zen Mode
