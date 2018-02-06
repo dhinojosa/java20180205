@@ -1,0 +1,111 @@
+Compiling Command Line
+-------
+javac -d {target} -cp {location of classes} {location of src}
+
+Running Java Code
+------
+java -cp {location of classes} {FQN main-class}
+e.g. java -cp target:../hufflepuff/target com.salesforce.slytherin.HelloSalesforce
+
+Reading the byte code
+------
+javap -v -cp {classpath} {classname}
+
+Mac, Linux: colon separator
+Windows: semicolon
+
+Exporting Command Line
+------
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk
+
+Make it permanent in .bash_profile
+------
+export JAVA_HOME=$(/usr/libexec/java_home)
+export PATH=$PATH:$JAVA_HOME/bin
+
+Make it permanent in .bash_profile but specify version
+------
+export JAVA_HOME=$(/usr/libexec/java_home -v 1.8.0_144)
+export PATH=$PATH:$JAVA_HOME/bin
+
+Install Maven in Brew
+---------------------
+% brew install maven
+
+Maven in .bash_profile (if you didn't install brew)
+-----
+export M2_HOME={maven location}
+export PATH=$PATH:$JAVA_HOME/bin:$M2_HOME
+
+Maven Central
+-----
+http://search.maven.org
+
+Maven running a plugin and goal
+------
+mvn {plugin}:{goal}
+
+Maven Create Project
+------
+mvn archetype:generate
+
+Maven Standard Commands
+-----------------------
+mvn clean (delete target)
+mvn compile
+mvn test
+mvn package (create jar)
+mvn clean package (delete target and create jar)
+
+JDK Major/Minor Versions
+-----------------------
+major  minor Java platform version 
+45       3           1.0
+45       3           1.1
+46       0           1.2/Java 2
+47       0           1.3/Java 2
+48       0           1.4/Java 2
+49       0           1.5/Java 5
+50       0           1.6/Java 6
+51       0           1.7/Java 7
+52       0           1.8/Java 8
+53       0           9
+
+Eclipse
+-------
+Use the latest
+- Eclipse Marketplace
+- Maven (M2Eclipse)
+
+Eclipse if things go wrong
+-------
+rm -rf .settings
+rm .classpath
+rm .project
+(Do it again)
+
+Upgrading Maven to use JDK 8 or higher:
+1.8 or 9
+-----------------------------------
+  <build>
+     <plugins>
+        <plugin>
+           <groupId>org.apache.maven.plugins</groupId>
+           <artifactId>maven-compiler-plugin</artifactId>
+           <version>3.7.0</version>
+           <configuration>
+              <source>1.8</source>
+              <target>1.8</target>
+           </configuration>
+        </plugin>
+     </plugins>
+  </build>
+
+Get the list of Eclipse Shortcuts
+---------------------------------
+COMMAND + SHIFT + L = Cheatsheet
+COMMAND + 3 = Lookup Shortcut
+COMMAND + 1 = Get Code Hint
+COMMAND + . = Next Error
+COMMAND + , = Previous Error
+(Replace COMMAND with CTRL for Windows)
