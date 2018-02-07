@@ -159,19 +159,29 @@ COMMAND + K + Z = Zen Mode, ESC+ESC to get out Zen Mode
 Tips
 ----
 Use "Column Selection Mode" for blocks
-
-No Operator Overloading in Java (no +, -)
+  IntelliJ - COMMAND + SHIFT + 8
+  Eclipse - OPTION + COMMAND + A
 
 Java Language Tips
 ------------------
 Use equals() for objects
--- Unless you want to determine whether references are the same.
-Use == for primitives
+
+Unless you want to determine whether references are the same...
+  Use == for primitives
+  No Operator Overloading in Java (no +, -)
 
 System.out.println Shortcuts
 -----------------------------
 IntelliJ - sout<TAB>
 Eclipse - sysout<CTRL+SPACE>
 
+Refactoring
+-----------
+Introduce Variable
+  IntelliJ - OPTION + COMMAND +V
+  Eclipse - OPTION + COMMAND + L
 
+Inline Variable
+  IntelliJ - OPTION + COMMAND + N
+  Eclipse - OPTION + COMMAND + I
 

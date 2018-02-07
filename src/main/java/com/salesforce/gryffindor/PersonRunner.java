@@ -43,8 +43,8 @@ public class PersonRunner {
 
         System.out.println(st2 == "Star Trek");
         System.out.println(st == st4); //false
-        String st5 = st4.intern();
-        System.out.println("Sta" == st5); //true
+        String i = st4.intern();
+        System.out.println("Sta" == i); //true
 
         Person person4 = new Person();
         person4.firstName = "Justin";
