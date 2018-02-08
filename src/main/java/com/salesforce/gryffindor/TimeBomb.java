@@ -42,4 +42,8 @@ public class TimeBomb {
             throw new Exception(e);
         }
     }
+
+    public void throwCustomRuntimeException() {
+        throw new LameExcuseException("I drank sewer water");
+    }
 }
