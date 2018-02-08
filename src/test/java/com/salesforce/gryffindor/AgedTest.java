@@ -35,13 +35,29 @@ public class AgedTest {
             }
         };
 
-        Ageable q5 = () -> 10;
+
+
+        Ageable q5 = new Ageable() {
+            @Override
+            public int getAge() {
+                return 10;
+            }
+        };
 
         ArrayList<Ageable> ageableList = new ArrayList<>();
         ageableList.add(tom);
         ageableList.add(julia);
         ageableList.add(wine);
         ageableList.add(q4);
+
+        q5.isTooOld();
+
+        //invoking the static methods
+        Ageable.doSomething();
+        Ageable.doSomething2();
+
+
+
 
 
     }

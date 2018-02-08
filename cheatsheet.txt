@@ -189,3 +189,43 @@ Git Commit
 -----------
    Intellij - COMMAND + K
    Eclipse - ???
+
+Something Worth Trying
+-----------------------
+Dash - Download and Easy Search API Utility
+
+Functional Categories
+---------------------
+() -> x = Supplier
+x -> () = Consumer
+x -> x + 1 = Function
+x -> (true | false) = Predicate
+
+Stream Debugger
+---------------
+https://plugins.jetbrains.com/plugin/9696-java-stream-debugger
+
+C# to Java
+-----------
+Interfaces (Java)
+
+
+Static Methods
+--------------
+Java - Call from class only, not the objects
+C# - Call from either class or the objects
+
+Note on Java
+------------
+You can call a class variable the same as a method
+
+
+
+
+
+
+
+
+
+
+

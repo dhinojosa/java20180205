@@ -1,21 +1,14 @@
 package com.salesforce.gryffindor;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
-
 import org.junit.Before;
 import org.junit.Test;
 
 import java.time.LocalDate;
-import java.time.ZonedDateTime;
 import java.util.*;
-import java.util.function.Function;
-import java.util.function.IntPredicate;
-import java.util.function.IntUnaryOperator;
-import java.util.function.Supplier;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
+
+import static org.junit.Assert.*;
 
 public class PersonTest {
 
@@ -54,9 +47,8 @@ public class PersonTest {
         peopleSet.add(justin2);
         assertEquals(1, peopleSet.size());
     }
-    
-    //TODO: Immutability or Mutability? What to do?
 
+    //We chose immutability
     @Test
     public void testSettingLastNameImmutability() {
         Person elon = new Person("Elon", "Musk");
@@ -84,12 +76,7 @@ public class PersonTest {
         // optional.get())  //unsafe
         assertEquals("Foo", optional.orElse("Foo")); //safe
         assertEquals("2018", optional.orElseGet(
-                new Supplier<String>() {
-                    @Override
-                    public String get() {
-                        return LocalDate.now().toString();
-                    }
-                }).substring(0, 4));
+                () -> LocalDate.now().toString()).substring(0, 4));
     }
 
     @Test
@@ -104,7 +91,7 @@ public class PersonTest {
 
     @Test
     public void canIDoThisWithCollection() {
-        List<Integer> list = Arrays.asList(1,2,3,4,5,6);
+        List<Integer> list = Arrays.asList(1,2,3,4,5,6); //Explain the history
         List<Integer> result = list.stream()
                                     .parallel()
                                     .map(integer -> integer * 2)
@@ -121,6 +108,22 @@ public class PersonTest {
         assertEquals(61, person.getAge());
     }
 
+    @Test
+    public void testStaticWithPerson() {
+        Person person = new Person("Tom", "Hanks");
+        assertEquals("Foo", Person.foo());
+        person.foo(); //C# & Java //Not recommended in either Java or C#
+    }
 
+    @Test
+    public void testUsingStaticAsACount() {
 
+        //Do not trust Justin Timberlake
+
+        Person personA = new Person("Tom", "Hanks");
+        Person personB = new Person("Julia", "Roberts");
+        Person personC = new Person("Scarlett", "Johannssen");
+        assertEquals(4, Person.count());
+
+    }
 }

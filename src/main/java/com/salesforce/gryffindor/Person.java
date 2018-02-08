@@ -7,8 +7,14 @@ import java.util.Optional;
 import static java.time.temporal.ChronoUnit.YEARS;
 
 public class Person implements Ageable{
+
+    static {
+        System.out.println("Loading Person Class");
+    }
+
     private final String firstName;
     private final String lastName;
+
 
     //As of 9.0: Optional is not serializable
     //Use vavr.io (formerly javaslang) library is you
@@ -18,6 +24,7 @@ public class Person implements Ageable{
 
     private final String middleName;
     private LocalDate birthDate;
+    private static int count;
 
     public Person(String firstName, String lastName) {
 		this(firstName, null, lastName);
@@ -28,6 +35,8 @@ public class Person implements Ageable{
         this.lastName = lastName;
         this.middleName = middleName;
         this.birthDate = null;
+        count += 1;
+        System.out.println("Created another Person");
     }
 
     public Person(String firstName, String lastName, LocalDate birthDate) {
@@ -69,5 +78,17 @@ public class Person implements Ageable{
     public int getAge() {
         //import static java.time.temporal.ChronoUnit.YEARS;
         return (int) YEARS.between(birthDate,LocalDate.now());
+    }
+
+    public static String foo() {
+        return "Foo";
+    }
+
+    public static int count() {
+        return count;
+    }
+
+    static {
+        System.out.println("Just about done loading Person Class");
     }
 }
