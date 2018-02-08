@@ -185,3 +185,7 @@ Inline Variable
   IntelliJ - OPTION + COMMAND + N
   Eclipse - OPTION + COMMAND + I
 
+Git Commit
+-----------
+   Intellij - COMMAND + K
+   Eclipse - ???
