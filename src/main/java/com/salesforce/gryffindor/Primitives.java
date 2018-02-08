@@ -18,7 +18,7 @@ public class Primitives {
         long lng = 491292383;
         long lng2 = 491292383L;
 
-        float f = 3292.9948F;
+        float f = 3292.9948F;  
         double d = 6456439.65D;
 
         boolean te = true;

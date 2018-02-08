@@ -2,15 +2,11 @@ package com.salesforce.gryffindor;
 
 public class PersonRunner {
     public static void main(String[] args) {
-        Person person = new Person();
-        person.firstName = "Justin";
-        person.lastName = "Timberlake";
-
+        Person person = new Person("Justin", "Timberlake");
+       
         System.out.println(person);
 
-        Person person2 = new Person();
-        person2.firstName = "Justin";
-        person2.lastName = "Timberlake";
+        Person person2 = new Person("Justin", "Timberlake");
 
         //reference equality
         System.out.println(person == person2); //false
@@ -18,10 +14,8 @@ public class PersonRunner {
         //object equality
         System.out.println(person.equals(person2)); //true
 
-        Person person3 = new Person();
-        person3.firstName = "Justin";
-        person3.lastName = "Bieber";
-
+        Person person3 = new Person("Justin", "Bieber");
+       
         System.out.println(person2.equals(person3)); //true
 
         String st = "Star Trek";
@@ -46,17 +40,16 @@ public class PersonRunner {
         String i = st4.intern();
         System.out.println("Sta" == i); //true
 
-        Person person4 = new Person();
-        person4.firstName = "Justin";
-        person4.lastName = "Timberlake";
+        Person person4 = new Person("Justin", "Timberlake");
 
         Person person5 = person4;
 
-        person5.lastName = "Time";
+        //person5.getLastName() ="Time";
 
         System.out.println(person4.toString());
 
-        Person person6 = null;
-        System.out.println(person6.firstName.substring(0,2));
+        //NullPointerException
+        //Person person6 = null;
+        //System.out.println(person6.firstName.substring(0,2));
     }
 }
