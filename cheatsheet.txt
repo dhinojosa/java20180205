@@ -219,6 +219,9 @@ Note on Java
 ------------
 You can call a class variable the same as a method
 
+If Interested in Managing Memory at Runtime
+-------------------------------------------
+JMX - Java Management Extensions
 
 
 

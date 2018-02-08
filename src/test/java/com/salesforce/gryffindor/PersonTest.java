@@ -124,6 +124,51 @@ public class PersonTest {
         Person personB = new Person("Julia", "Roberts");
         Person personC = new Person("Scarlett", "Johannssen");
         assertEquals(4, Person.count());
-
     }
+    
+    @Test
+    public void testHintAtGC() {
+        Person personA = new Person("Tom", "Hanks");
+        Person personB = new Person("Julia", "Roberts");
+        Person personC = new Person("Scarlett", "Johannssen");
+        personA = null;
+        personB = null;
+        personC = null;
+        System.gc(); //Hint at GC to collect objects
+    }
+    
+    @Test
+    public void testSortByLastName() {
+        Person personA = new Person("Tom", "Hanks", LocalDate.of(1956, 7, 10));
+        Person personB = new Person("Julia", "Roberts", LocalDate.of(1967, 10, 28));
+        Person personC = new Person("Scarlett", "Johannssen", LocalDate.of(1984, 11, 22));
+   	
+//        ArrayList<Person> people = new ArrayList<>();
+//        people.add(personA);
+//        people.add(personB);
+//        people.add(personC);
+//        
+        List<Person> people = Arrays.asList(personA, personB, personC);
+        
+        //people.sort(new LastNamePersonComparator());
+        people.sort(Comparator.comparing(person1 -> person1.getLastName()));
+        
+        System.out.println(people); 
+       
+        people.sort(Comparator.comparingInt(person -> person.getAge()));
+        
+        System.out.println(people);
+        
+        
+        //If I do not add <Person> it is called a raw type
+        //and it was a PITA. 
+        //DO NOT USE RAW TYPES, USE GENERICS
+        //ArrayList people2 = new ArrayList(); 
+       
+        
+    }
+    
+    
+    
+    
 }
