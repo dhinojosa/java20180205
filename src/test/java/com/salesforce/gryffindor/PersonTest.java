@@ -139,7 +139,8 @@ public class PersonTest {
     
     @Test
     public void testSortByLastName() {
-        Person personA = new Person("Tom", "Hanks", LocalDate.of(1956, 7, 10));
+        LocalDate tomHanksBirthDate = LocalDate.of(1956, 7, 10);
+        Person personA = new Person("Tom", "Hanks", tomHanksBirthDate);
         Person personB = new Person("Julia", "Roberts", LocalDate.of(1967, 10, 28));
         Person personC = new Person("Scarlett", "Johannssen", LocalDate.of(1984, 11, 22));
    	
@@ -167,8 +168,6 @@ public class PersonTest {
        
         
     }
-    
-    
-    
+       
     
 }

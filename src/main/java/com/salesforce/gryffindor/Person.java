@@ -6,7 +6,7 @@ import java.util.Optional;
 
 import static java.time.temporal.ChronoUnit.YEARS;
 
-public class Person implements Ageable{
+public class Person extends Mammal implements Ageable{
 
     static {
         System.out.println("Loading Person Class");
@@ -14,7 +14,7 @@ public class Person implements Ageable{
 
     private final String firstName;
     private final String lastName;
-
+    private final int currentTemperature;
 
     //As of 9.0: Optional is not serializable
     //Use vavr.io (formerly javaslang) library is you
@@ -35,6 +35,7 @@ public class Person implements Ageable{
         this.lastName = lastName;
         this.middleName = middleName;
         this.birthDate = null;
+        this.currentTemperature = 98;
         count += 1;
         System.out.println("Created another Person");
     }
@@ -90,5 +91,15 @@ public class Person implements Ageable{
 
     static {
         System.out.println("Just about done loading Person Class");
+    }
+
+    @Override
+    public int currentBodyTemperature() {
+        return this.currentTemperature;
+    }
+
+    @Override
+    public int normalBodyTemperature() {
+        return 98;
     }
 }
