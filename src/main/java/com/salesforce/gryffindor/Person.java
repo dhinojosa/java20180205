@@ -6,7 +6,7 @@ import java.util.Optional;
 
 import static java.time.temporal.ChronoUnit.YEARS;
 
-public class Person extends Mammal implements Ageable{
+public class Person extends Mammal{
 
     static {
         System.out.println("Loading Person Class");
