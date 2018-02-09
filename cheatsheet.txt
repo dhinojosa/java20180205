@@ -227,6 +227,26 @@ If Interested in Managing Memory at Runtime
 -------------------------------------------
 JMX - Java Management Extensions
 
+Executing a Job in Maven
+------------------------
+mvn compile -Dfoo=hansolo -Dbar=KidsAreTrouble exec:java -Dexec.mainClass=com.salesforce.gryffindor.ReadingResourcesTryWithResources
+
+Java Common Packages
+-------------
+java.lang = Language Packages, automatically imported
+java.util = Collections and Utilities
+java.io = IO
+java.nio = New Packages
+
+Some Packages Worth Considering
+-------------------------------
+Jackson - JSON - https://github.com/FasterXML/jackson
+JDOM - XML - http://jdom.org/ (I still like this library)
+Jackson XML
+XStream
+JAXB
+
+
 
 
 
