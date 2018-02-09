@@ -30,6 +30,7 @@ public class OnBoardingServiceTest {
                 new Employee("Justin", "Bieber", HiringStatus.FAILED)
         );
 
+
         when(employeeDAO.newHires()).thenReturn(newHires);
 
         onBoardingService.setOrientationDate(LocalDate.of(2018, 3, 1));
