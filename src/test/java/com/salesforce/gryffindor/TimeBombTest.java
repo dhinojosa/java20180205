@@ -89,7 +89,7 @@ public class TimeBombTest {
     public void testHandleAExceptionInAnException() {
         TimeBomb timeBomb = new TimeBomb();
         try {
-            timeBomb.throwANestedException();
+            //timeBomb.throwANestedException();
         } catch (Exception e) {
             e.getCause();
         }
